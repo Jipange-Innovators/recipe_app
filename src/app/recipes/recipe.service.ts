@@ -36,4 +36,12 @@ imageUrl:'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhM
         }
 
   }
+
+deleteRecipe(recipeId: string){
+  this.recipes=this.recipes.filter(
+    recipe=>{
+      return recipe.id!==recipeId;
+    }
+  );
+}
 }
