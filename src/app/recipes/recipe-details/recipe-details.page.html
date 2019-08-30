@@ -1,20 +1,23 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>recipe-details</ion-title>
+  <ion-toolbar color='primary'>
+    <ion-title>{{loadedRecipe.title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid>
-   <ion-row>
+   <ion-row no-padding >
 
     <ion-col>
-      <ion-img [src]='this.loadedRecipe.imageUrl'></ion-img>
+      <ion-img no-padding [src]='this.loadedRecipe.imageUrl'></ion-img>
     </ion-col>
    </ion-row>
   <ion-row>
     <ion-col>
-      <h1>{{ loadedRecipe.title}}</h1>
+      <h1 text-center >{{ loadedRecipe.title}}</h1>
     </ion-col>
   </ion-row>
      <ion-row>

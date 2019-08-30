@@ -1,12 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>recipes</ion-title>
+  <ion-toolbar color='primary'>
+    <ion-title >recipes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 <ion-list>
- <ion-item *ngFor="let recipe of this.recipeService.getAllRecipes()">
+ <ion-item *ngFor="let recipe of this.recipeService.getAllRecipes()"
+ [routerLink]="['../recipes',recipe.id]"
+ >
      <ion-avatar>
        <ion-img [src]="recipe.imageUrl"></ion-img>
      
